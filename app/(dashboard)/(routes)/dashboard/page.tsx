@@ -1,7 +1,10 @@
-import { Button } from '@/components/ui/button';
+import { UserButton } from '@clerk/nextjs';
 
-const DashboardPage = () => {
-  return <p>Dashboard page</p>;
-};
-
-export default DashboardPage;
+export default function Home() {
+  return (
+    <div className="h-screen">
+      <UserButton afterSignOutUrl="/" />
+      <p>Dashboard Page (Protected)</p>
+    </div>
+  );
+}
